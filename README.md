@@ -1,224 +1,261 @@
 # Professional Dashboard
 
-একটি সম্পূর্ণ পেশাদার ড্যাশবোর্ড যা শুধুমাত্র Tailwind CSS এবং React/Next.js ব্যবহার করে তৈরি। এটি যেকোনো React বা Next.js প্রজেক্টে সহজেই ইমপ্লিমেন্ট করা যায়।
+A **complete professional dashboard** built entirely with **Tailwind CSS** and **React/Next.js**.  
+It can be easily integrated into any React or Next.js project.
 
-## ✨ বৈশিষ্ট্য
+---
 
-### 🎨 ডিজাইন ও UI
-- **সম্পূর্ণ রেসপন্সিভ** - মোবাইল, ট্যাবলেট এবং ডেস্কটপে নিখুঁত
-- **ডার্ক/লাইট/সিস্টেম মোড** - থিম সুইচার সহ
-- **পেশাদার ডিজাইন** - আধুনিক এবং পরিষ্কার UI
-- **শুধুমাত্র Tailwind CSS** - কোনো UI লাইব্রেরি নেই
+## ✨ Features
 
-### 🔐 অথেন্টিকেশন
-- **লগইন সিস্টেম** - ইমেইল এবং পাসওয়ার্ড সহ
-- **ফরগট পাসওয়ার্ড ফ্লো** - OTP ভেরিফিকেশন সহ
-- **OTP কম্পোনেন্ট** - সব ডিভাইসে পেস্ট সাপোর্ট সহ
+### 🎨 Design & UI
 
-### 📊 ড্যাশবোর্ড ফিচার
-- **সাইডবার নেভিগেশন** - কোলাপ্স/এক্সপান্ড সিস্টেম
-- **রেসপন্সিভ হেডার** - ইউজার প্রোফাইল ড্রপডাউন সহ
-- **মোবাইল মেনু** - ব্লার ব্যাকগ্রাউন্ড সহ
-- **ডেটা টেবিল** - সার্চ এবং পেজিনেশন সহ
+- **Fully Responsive** — Perfect on mobile, tablet, and desktop
+- **Dark/Light/System Mode** — With a theme switcher
+- **Professional Design** — Clean and modern UI
+- **Pure Tailwind CSS** — No external UI libraries
 
-### 🔍 সার্চ ও পেজিনেশন
-- **URL-বেসড সার্চ** - সার্ভার-সাইড পেজিনেশন সাপোর্ট
-- **রিইউজেবল পেজিনেশন কম্পোনেন্ট** - সব পেজে ব্যবহারযোগ্য
-- **ডেবাউন্স সার্চ** - পারফরম্যান্স অপটিমাইজড
+### 🔐 Authentication
 
-### 👥 রোল-বেসড এক্সেস
-- **Admin, Manager, User রোল** - কাস্টমাইজেবল
-- **পারমিশন সিস্টেম** - প্রতিটি রোলের জন্য আলাদা এক্সেস
-- **প্রোটেক্টেড রুট** - অননুমোদিত এক্সেস ব্লক করে
+- **Login System** — Email and password support
+- **Forgot Password Flow** — Includes OTP verification
+- **OTP Component** — Supports paste on all devices
 
-### 📱 মোবাইল অপটিমাইজেশন
-- **টাচ-ফ্রেন্ডলি** - সব ইন্টারঅ্যাকশন মোবাইল-অপটিমাইজড
-- **রেসপন্সিভ লেআউট** - সব স্ক্রিন সাইজে পারফেক্ট
-- **ফাস্ট লোডিং** - মিনিমাল বান্ডেল সাইজ
+### 📊 Dashboard Features
 
-## 🚀 দ্রুত শুরু করুন
+- **Sidebar Navigation** — Collapsible and expandable
+- **Responsive Header** — User profile dropdown included
+- **Mobile Menu** — With blur background
+- **Data Table** — Search and pagination supported
 
-### ইনস্টলেশন
+### 🔍 Search & Pagination
 
-\`\`\`bash
-# ক্লোন করুন বা ডাউনলোড করুন
+- **URL-Based Search** — Server-side pagination support
+- **Reusable Pagination Component** — Works across pages
+- **Debounced Search** — Performance optimized
+
+### 👥 Role-Based Access
+
+- **Admin, Manager, User Roles** — Fully customizable
+- **Permission System** — Separate access for each role
+- **Protected Routes** — Prevents unauthorized access
+
+### 📱 Mobile Optimization
+
+- **Touch-Friendly** — All interactions optimized for mobile
+- **Responsive Layout** — Adapts to all screen sizes
+- **Fast Loading** — Minimal bundle size
+
+---
+
+## 🚀 Getting Started
+
+### Installation
+
+```bash
+# Clone or download
 git clone <repository-url>
 cd professional-dashboard
 
-# ডিপেন্ডেন্সি ইনস্টল করুন
+# Install dependencies
 npm install
 
-# ডেভেলপমেন্ট সার্ভার চালান
+# Run development server
 npm run dev
-\`\`\`
+```
 
-ব্রাউজার খুলুন এবং [http://localhost:3000](http://localhost:3000) এ যান।
+Then open your browser and navigate to [http://localhost:3000](http://localhost:3000).
 
-### ডেমো ক্রেডেনশিয়াল
+### Demo Credentials
 
-**Admin অ্যাকাউন্ট:**
-\`\`\`
+**Admin Account:**
+
+```
 Email: admin@example.com
 Password: admin123
-\`\`\`
+```
 
-**Manager অ্যাকাউন্ট:**
-\`\`\`
+**Manager Account:**
+
+```
 Email: manager@example.com
 Password: manager123
-\`\`\`
+```
 
-**User অ্যাকাউন্ট:**
-\`\`\`
+**User Account:**
+
+```
 Email: user@example.com
 Password: user123
-\`\`\`
+```
 
-## 📁 প্রজেক্ট স্ট্রাকচার
+---
 
-\`\`\`
+## 📁 Project Structure
+
+```plaintext
 professional-dashboard/
 ├── app/
-│   ├── layout.tsx                 # রুট লেআউট
-│   ├── page.tsx                   # হোম পেজ (রিডিরেক্ট)
-│   ├── globals.css                # গ্লোবাল স্টাইল এবং থিম
+│   ├── layout.tsx                 # Root layout
+│   ├── page.tsx                   # Home page (redirect)
+│   ├── globals.css                # Global styles and theme
 │   ├── login/
-│   │   └── page.tsx              # লগইন পেজ
+│   │   └── page.tsx              # Login page
 │   ├── forgot-password/
-│   │   └── page.tsx              # ফরগট পাসওয়ার্ড পেজ
+│   │   └── page.tsx              # Forgot password page
 │   └── dashboard/
-│       ├── layout.tsx             # ড্যাশবোর্ড লেআউট
-│       ├── page.tsx               # ড্যাশবোর্ড হোম
+│       ├── layout.tsx             # Dashboard layout
+│       ├── page.tsx               # Dashboard home
 │       ├── users/
-│       │   └── page.tsx           # ইউজার লিস্ট
+│       │   └── page.tsx           # User list
 │       ├── analytics/
-│       │   └── page.tsx           # অ্যানালিটিক্স পেজ
+│       │   └── page.tsx           # Analytics page
 │       ├── reports/
-│       │   └── page.tsx           # রিপোর্ট পেজ
+│       │   └── page.tsx           # Reports page
 │       ├── settings/
-│       │   └── page.tsx           # সেটিংস পেজ
+│       │   └── page.tsx           # Settings page
 │       ├── profile/
-│       │   └── page.tsx           # প্রোফাইল পেজ
+│       │   └── page.tsx           # Profile page
 │       └── unauthorized/
-│           └── page.tsx           # এক্সেস ডিনাইড পেজ
+│           └── page.tsx           # Access denied page
 ├── components/
-│   ├── icons.tsx                  # কাস্টম SVG আইকন
+│   ├── icons.tsx                  # Custom SVG icons
 │   └── dashboard/
-│       ├── layout.tsx             # ড্যাশবোর্ড লেআউট কম্পোনেন্ট
-│       ├── sidebar.tsx            # সাইডবার নেভিগেশন
-│       ├── header.tsx             # হেডার কম্পোনেন্ট
-│       ├── pagination.tsx         # পেজিনেশন কম্পোনেন্ট
-│       ├── search-bar.tsx         # সার্চ বার কম্পোনেন্ট
-│       ├── data-table.tsx         # ডেটা টেবিল কম্পোনেন্ট
-│       └── protected-route.tsx    # প্রোটেক্টেড রুট কম্পোনেন্ট
+│       ├── layout.tsx             # Dashboard layout component
+│       ├── sidebar.tsx            # Sidebar navigation
+│       ├── header.tsx             # Header component
+│       ├── pagination.tsx         # Pagination component
+│       ├── search-bar.tsx         # Search bar component
+│       ├── data-table.tsx         # Data table component
+│       └── protected-route.tsx    # Protected route component
 ├── providers/
-│   └── theme-provider.tsx         # থিম প্রোভাইডার
+│   └── theme-provider.tsx         # Theme provider
 ├── hooks/
-│   └── use-auth.ts                # অথেন্টিকেশন হুক
+│   └── use-auth.ts                # Authentication hook
 ├── lib/
-│   ├── auth.ts                    # অথেন্টিকেশন ইউটিলিটি
-│   └── constants.ts               # কনস্ট্যান্ট এবং ডেমো ডেটা
-├── package.json                   # ডিপেন্ডেন্সি (সর্বশেষ ভার্সন)
-├── tsconfig.json                  # TypeScript কনফিগ
-├── next.config.mjs                # Next.js কনফিগ
-├── postcss.config.mjs             # PostCSS কনফিগ
-├── .eslintrc.json                 # ESLint কনফিগ
-└── README.md                      # এই ফাইল
-\`\`\`
+│   ├── auth.ts                    # Authentication utilities
+│   └── constants.ts               # Constants and demo data
+├── package.json                   # Dependencies (latest versions)
+├── tsconfig.json                  # TypeScript config
+├── next.config.mjs                # Next.js config
+├── postcss.config.mjs             # PostCSS config
+├── .eslintrc.json                 # ESLint config
+└── README.md                      # This file
+```
 
-## 🎯 কোর কম্পোনেন্ট
+---
 
-### 1. **Sidebar** (`components/dashboard/sidebar.tsx`)
-- কোলাপ্স/এক্সপান্ড ফাংশনালিটি
-- রোল-বেসড মেনু ফিল্টারিং
-- অ্যাক্টিভ লিংক হাইলাইটিং
-- মোবাইল ড্রয়ার মোড (ব্লার ব্যাকগ্রাউন্ড সহ)
+## 🎯 Core Components
 
-### 2. **Header** (`components/dashboard/header.tsx`)
-- থিম সুইচার (লাইট/ডার্ক/সিস্টেম)
-- ইউজার প্রোফাইল ড্রপডাউন
-- লগআউট ফাংশনালিটি
-- মোবাইল মেনু টগল
+### 1. **Sidebar**
 
-### 3. **Pagination** (`components/dashboard/pagination.tsx`)
-- URL-বেসড পেজিনেশন
-- স্মার্ট পেজ নম্বর ডিসপ্লে
-- প্রথম/শেষ পেজ জাম্প
-- রেসপন্সিভ ডিজাইন
+- Collapse/Expand functionality
+- Role-based menu filtering
+- Active link highlighting
+- Mobile drawer mode with blur background
 
-### 4. **SearchBar** (`components/dashboard/search-bar.tsx`)
-- ডেবাউন্স সার্চ
-- URL প্যারামিটার সিঙ্ক
-- ক্লিয়ার বাটন
-- রিয়েল-টাইম ফিল্টারিং
+### 2. **Header**
 
-### 5. **DataTable** (`components/dashboard/data-table.tsx`)
-- জেনেরিক টাইপ সাপোর্ট
-- কাস্টম রেন্ডার ফাংশন
-- লোডিং স্টেট
-- এমপ্টি স্টেট
+- Theme switcher (Light/Dark/System)
+- User profile dropdown
+- Logout functionality
+- Mobile menu toggle
 
-### 6. **ProtectedRoute** (`components/dashboard/protected-route.tsx`)
-- রোল-বেসড এক্সেস চেক
-- অটোমেটিক রিডিরেক্ট
-- লোডিং স্টেট
+### 3. **Pagination**
 
-## 🎨 থিম কাস্টমাইজেশন
+- URL-based pagination
+- Smart page number display
+- Jump to first/last page
+- Responsive design
 
-`app/globals.css` এ থিম ভেরিয়েবল সংজ্ঞায়িত করা আছে:
+### 4. **SearchBar**
 
-\`\`\`css
+- Debounced search
+- URL parameter sync
+- Clear button
+- Real-time filtering
+
+### 5. **DataTable**
+
+- Generic type support
+- Custom render functions
+- Loading state
+- Empty state
+
+### 6. **ProtectedRoute**
+
+- Role-based access check
+- Automatic redirect
+- Loading state
+
+---
+
+## 🎨 Theme Customization
+
+Defined in `app/globals.css`:
+
+```css
 @theme inline {
   --color-primary: #3b82f6;
   --color-primary-dark: #1e40af;
   --color-primary-light: #60a5fa;
-  
+
   --color-background: #ffffff;
   --color-background-secondary: #f9fafb;
   --color-foreground: #111827;
-  
-  /* ডার্ক মোড */
+
+  /* Dark mode */
   --color-dark-background: #0f172a;
   --color-dark-background-secondary: #1e293b;
   --color-dark-foreground: #f1f5f9;
-  
-  /* অ্যাক্সেন্ট কালার */
+
+  /* Accent colors */
   --color-success: #10b981;
   --color-warning: #f59e0b;
   --color-error: #ef4444;
 }
-\`\`\`
+```
 
-## 🔐 অথেন্টিকেশন ফ্লো
+---
 
-### লগইন
-1. ইমেইল এবং পাসওয়ার্ড এন্টার করুন
-2. ইউজার ডেটা localStorage এ সেভ হয়
-3. ড্যাশবোর্ডে রিডিরেক্ট
+## 🔐 Authentication Flow
 
-### ফরগট পাসওয়ার্ড
-1. ইমেইল এন্টার করুন
-2. OTP পান (ডেমো: যেকোনো 6 ডিজিট)
-3. নতুন পাসওয়ার্ড সেট করুন
-4. লগইন পেজে রিডিরেক্ট
+### Login
 
-## 👥 রোল-বেসড এক্সেস
+1. Enter email and password
+2. User data saved to `localStorage`
+3. Redirected to dashboard
+
+### Forgot Password
+
+1. Enter email
+2. Receive OTP (demo: any 6 digits)
+3. Set a new password
+4. Redirect to login page
+
+---
+
+## 👥 Role-Based Access
 
 ### Admin
-- সব পেজ এক্সেস করতে পারে
-- ইউজার ম্যানেজমেন্ট
-- সেটিংস এক্সেস
+
+- Access all pages
+- Manage users
+- Access settings
 
 ### Manager
-- ড্যাশবোর্ড, ইউজার, অ্যানালিটিক্স, রিপোর্ট দেখতে পারে
-- সেটিংস এক্সেস নেই
+
+- View Dashboard, Users, Analytics, and Reports
+- No access to settings
 
 ### User
-- শুধুমাত্র ড্যাশবোর্ড এবং প্রোফাইল দেখতে পারে
 
-## 📦 ডিপেন্ডেন্সি (সর্বশেষ ভার্সন)
+- View Dashboard and Profile only
 
-\`\`\`json
+---
+
+## 📦 Dependencies (Latest Versions)
+
+```json
 {
   "dependencies": {
     "next": "^15.5.4",
@@ -234,45 +271,49 @@ professional-dashboard/
     "@tailwindcss/postcss": "^4.1.9"
   }
 }
-\`\`\`
+```
 
-## 🎓 কোড কোয়ালিটি
+---
 
-- ✅ TypeScript সাপোর্ট (সর্বশেষ ভার্সন)
-- ✅ ESLint কনফিগার করা
-- ✅ সিমান্টিক HTML
-- ✅ ARIA অ্যাট্রিবিউট
-- ✅ পারফরম্যান্স অপটিমাইজড
-- ✅ কোনো বিল্ড এরর নেই
-- ✅ কোনো লিন্ট এরর নেই
+## 🎓 Code Quality
 
-## 🔧 কাস্টমাইজেশন গাইড
+- ✅ TypeScript support (latest)
+- ✅ ESLint configured
+- ✅ Semantic HTML
+- ✅ ARIA attributes
+- ✅ Performance optimized
+- ✅ No build errors
+- ✅ No lint errors
 
-### নতুন পেজ যোগ করুন
+---
 
-\`\`\`tsx
+## 🔧 Customization Guide
+
+### Add a New Page
+
+```tsx
 // app/dashboard/new-page/page.tsx
-"use client"
+"use client";
 
-import { ProtectedRoute } from "@/components/dashboard/protected-route"
+import { ProtectedRoute } from "@/components/dashboard/protected-route";
 
 export default function NewPage() {
   return (
     <ProtectedRoute requiredRoles={["admin"]}>
       <div className="space-y-6">
         <h1 className="text-3xl font-bold">New Page</h1>
-        {/* কন্টেন্ট এখানে */}
+        {/* Content here */}
       </div>
     </ProtectedRoute>
-  )
+  );
 }
-\`\`\`
+```
 
-### নতুন নেভিগেশন আইটেম যোগ করুন
+### Add a Navigation Item
 
-`lib/constants.ts` এ `SIDEBAR_ITEMS` অ্যারে এডিট করুন:
+Edit the `SIDEBAR_ITEMS` array in `lib/constants.ts`:
 
-\`\`\`tsx
+```tsx
 export const SIDEBAR_ITEMS = [
   // ... existing items
   {
@@ -282,66 +323,76 @@ export const SIDEBAR_ITEMS = [
     href: "/dashboard/new-page",
     roles: ["admin"],
   },
-]
-\`\`\`
+];
+```
 
-### রোল পারমিশন কাস্টমাইজ করুন
+### Customize Role Permissions
 
-`lib/auth.ts` এ `rolePermissions` এডিট করুন:
+Edit `rolePermissions` in `lib/auth.ts`:
 
-\`\`\`tsx
+```tsx
 export const rolePermissions: Record<UserRole, string[]> = {
   admin: ["view_dashboard", "manage_users", "new_permission"],
   manager: ["view_dashboard", "view_users"],
   user: ["view_dashboard"],
-}
-\`\`\`
+};
+```
 
-## 🐛 ট্রাবলশুটিং
+---
 
-### লগইন পেজে স্টাক হয়েছে?
-- localStorage চেক করুন: `localStorage.getItem('user')`
-- ব্রাউজার কনসোল এ এরর দেখুন
+## 🐛 Troubleshooting
 
-### থিম পরিবর্তন হচ্ছে না?
-- localStorage থেকে থিম চেক করুন: `localStorage.getItem('theme')`
-- ব্রাউজার রিফ্রেশ করুন
+### Stuck on Login Page?
 
-### পেজিনেশন কাজ করছে না?
-- URL প্যারামিটার চেক করুন: `?page=1&search=query`
-- ডেটা লেন্থ চেক করুন
+- Check localStorage: `localStorage.getItem('user')`
+- Inspect browser console for errors
 
-### npm install এ এরর?
-- `node_modules` ফোল্ডার ডিলিট করুন
-- `npm cache clean --force` চালান
-- আবার `npm install` চালান
+### Theme Not Changing?
 
-## 🚀 ডিপ্লয়মেন্ট
+- Check localStorage: `localStorage.getItem('theme')`
+- Refresh browser
 
-### Vercel এ ডিপ্লয় করুন
+### Pagination Not Working?
 
-\`\`\`bash
+- Check URL parameters: `?page=1&search=query`
+- Verify data length
+
+### npm install Errors?
+
+- Delete `node_modules`
+- Run `npm cache clean --force`
+- Reinstall with `npm install`
+
+---
+
+## 🚀 Deployment
+
+### Deploy to Vercel
+
+```bash
 npm run build
 vercel deploy
-\`\`\`
+```
 
-### অন্যান্য প্ল্যাটফর্ম
+### Other Platforms
 
-\`\`\`bash
+```bash
 npm run build
-# আউটপুট: .next ফোল্ডার
-\`\`\`
+# Output: .next folder
+```
 
-## 📝 লাইসেন্স
+---
 
-এই প্রজেক্ট ওপেন সোর্স এবং ফ্রি ব্যবহারের জন্য উপলব্ধ।
+## 📝 License
 
-## 🤝 কন্ট্রিবিউশন
+This project is **open-source** and **free to use**.
 
-উন্নতির জন্য সাজেশন এবং পুল রিকোয়েস্ট স্বাগত জানাই।
+## 🤝 Contribution
+
+Suggestions and pull requests are welcome!
 
 ---
 
 **Happy Coding! 🚀**
 
-আরও তথ্যের জন্য [SETUP.md](./SETUP.md) এবং [QUICK_REFERENCE.md](./QUICK_REFERENCE.md) দেখুন।
+For more details, check [SETUP.md](./SETUP.md) and [QUICK_REFERENCE.md](./QUICK_REFERENCE.md).
