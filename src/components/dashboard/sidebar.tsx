@@ -91,7 +91,7 @@ export function Sidebar({ isOpen, isCollapsed, onClose }: SidebarProps) {
                 >
                   {getIcon(item.icon)}
                   {!isCollapsed && (
-                    <span className="hidden lg:inline text-sm font-medium">
+                    <span className="lg:inline text-sm font-medium">
                       {item.label}
                     </span>
                   )}
