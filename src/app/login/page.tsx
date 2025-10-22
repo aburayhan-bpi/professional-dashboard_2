@@ -98,12 +98,12 @@ export default function LoginPage() {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:cursor-pointer"
                 >
                   {showPassword ? (
-                    <Icons.EyeOff className="w-4 h-4" />
-                  ) : (
                     <Icons.Eye className="w-4 h-4" />
+                  ) : (
+                    <Icons.EyeOff className="w-4 h-4" />
                   )}
                 </button>
               </div>
@@ -112,13 +112,14 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium py-2 rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium py-2 rounded-lg transition-colors flex items-center justify-center gap-2 hover:cursor-pointer"
             >
               {isLoading && <Icons.Loader className="w-4 h-4 animate-spin" />}
               {isLoading ? "Signing in..." : "Sign in"}
             </button>
           </form>
 
+          {/* demo credentials */}
           <div className="border-t border-gray-200 dark:border-slate-700 pt-6">
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-3 font-medium">
               Demo Credentials:
@@ -131,7 +132,7 @@ export default function LoginPage() {
                     setEmail(cred.email);
                     setPassword(cred.password);
                   }}
-                  className="w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-300 transition-colors"
+                  className="w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-300 transition-colors hover:cursor-pointer"
                 >
                   <div className="font-medium">{cred.role}</div>
                   <div className="text-xs text-gray-500 dark:text-gray-400">
