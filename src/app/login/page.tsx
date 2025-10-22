@@ -134,7 +134,7 @@ export default function LoginPage() {
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-3 font-medium">
               Demo Credentials:
             </p>
-            <div className="space-y-2">
+            <div className="space-y-2 overflow-y-auto max-h-[100px]">
               {demoCredentials.map((cred) => (
                 <button
                   key={cred.email}
