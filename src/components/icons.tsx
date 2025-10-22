@@ -1,33 +1,40 @@
 import {
-  LayoutDashboard,
-  Users,
+  AlertCircle,
+  ArrowRight,
   BarChart3,
-  FileText,
-  Settings,
-  User,
-  Menu,
-  X,
-  Sun,
-  Moon,
-  Monitor,
-  LogOut,
+  Calendar,
+  CheckCircle,
   ChevronLeft,
   ChevronRight,
-  Search,
-  Mail,
-  MapPin,
-  Calendar,
-  AlertCircle,
-  CheckCircle,
   Clock,
-  TrendingUp,
   Eye,
   EyeOff,
-  Lock,
-  ArrowRight,
+  FileText,
   Home,
+  LayoutDashboard,
   Loader,
-} from "lucide-react"
+  Lock,
+  LogOut,
+  Mail,
+  MapPin,
+  Menu,
+  Monitor,
+  Moon,
+  Search,
+  Settings,
+  Sun,
+  TrendingUp,
+  User,
+  Users,
+  X,
+} from "lucide-react";
+
+import {
+  TbLayoutSidebarLeftCollapseFilled,
+  TbLayoutSidebarRightCollapseFilled,
+} from "react-icons/tb";
+
+import { FaGithub } from "react-icons/fa";
 
 export const Icons = {
   LayoutDashboard,
@@ -58,4 +65,7 @@ export const Icons = {
   ArrowRight,
   Home,
   Loader,
-}
+  TbLayoutSidebarLeftCollapseFilled,
+  TbLayoutSidebarRightCollapseFilled,
+  FaGithub,
+};

@@ -41,4 +41,4 @@ export const SIDEBAR_ITEMS = [
     icon: "User",
     roles: ["admin", "manager", "user"],
   },
-]
+];

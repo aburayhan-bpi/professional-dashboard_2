@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { useAuth } from "@/src/hooks/use-auth";
@@ -7,15 +6,16 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Icons } from "../icons";
-
 interface HeaderProps {
   onMenuClick: () => void;
+  sidebarOpen: boolean;
   isCollapsed: boolean;
   onCollapseToggle: () => void;
 }
 
 export function Header({
   onMenuClick,
+  sidebarOpen,
   isCollapsed,
   onCollapseToggle,
 }: HeaderProps) {
@@ -49,26 +49,38 @@ export function Header({
       <div className="flex items-center gap-4">
         <button
           onClick={onMenuClick}
-          className="lg:hidden text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white p-2 rounded-lg transition-colors"
+          className="lg:hidden text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-500 p-2 rounded-md transition-all bg-gray-50 dark:bg-gray-800 hover:cursor-pointer transform  duration-300"
           aria-label="Toggle menu"
         >
-          <Icons.Menu className="w-5 h-5" />
+          {/* <Icons.Menu className="w-5 h-5" /> */}
+          {sidebarOpen ? (
+            <Icons.TbLayoutSidebarLeftCollapseFilled />
+          ) : (
+            <Icons.TbLayoutSidebarRightCollapseFilled />
+          )}
         </button>
 
         <button
           onClick={onCollapseToggle}
-          className="hidden lg:flex text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white p-2 rounded-lg transition-colors"
+          className="hidden lg:flex -ml-7 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-500 p-2 rounded-r-lg transition-colors bg-gray-50 dark:bg-gray-800 hover:cursor-pointer"
           aria-label="Toggle sidebar collapse"
         >
-          <Icons.Menu className="w-5 h-5" />
+          {/* <Icons.Menu className="w-5 h-5" /> */}
+
+          {isCollapsed ? (
+            <Icons.TbLayoutSidebarRightCollapseFilled />
+          ) : (
+            <Icons.TbLayoutSidebarLeftCollapseFilled />
+          )}
         </button>
       </div>
 
+      {/* Theme Switcher */}
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-1 bg-gray-100 dark:bg-slate-800 rounded-lg p-1">
           <button
             onClick={() => setTheme("light")}
-            className={`p-2 rounded transition-colors ${
+            className={`p-2 rounded transition-colors hover:cursor-pointer ${
               theme === "light"
                 ? "bg-white dark:bg-slate-700 text-gray-900 dark:text-white shadow-sm"
                 : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
@@ -80,7 +92,7 @@ export function Header({
           </button>
           <button
             onClick={() => setTheme("dark")}
-            className={`p-2 rounded transition-colors ${
+            className={`p-2 rounded transition-colors hover:cursor-pointer ${
               theme === "dark"
                 ? "bg-white dark:bg-slate-700 text-gray-900 dark:text-white shadow-sm"
                 : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
@@ -92,7 +104,7 @@ export function Header({
           </button>
           <button
             onClick={() => setTheme("system")}
-            className={`p-2 rounded transition-colors ${
+            className={`p-2 rounded transition-colors hover:cursor-pointer ${
               theme === "system"
                 ? "bg-white dark:bg-slate-700 text-gray-900 dark:text-white shadow-sm"
                 : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
@@ -107,7 +119,7 @@ export function Header({
         <div className="relative" ref={dropdownRef}>
           <button
             onClick={() => setShowDropdown(!showDropdown)}
-            className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+            className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors hover:cursor-pointer"
             aria-label="User menu"
           >
             {user?.avatar && (
@@ -146,7 +158,7 @@ export function Header({
                     router.push("/dashboard/profile");
                     setShowDropdown(false);
                   }}
-                  className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+                  className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors hover:cursor-pointer"
                 >
                   <Icons.User className="w-4 h-4" />
                   Profile
@@ -156,7 +168,7 @@ export function Header({
                     router.push("/dashboard/settings");
                     setShowDropdown(false);
                   }}
-                  className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+                  className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors hover:cursor-pointer"
                 >
                   <Icons.Settings className="w-4 h-4" />
                   Settings
@@ -166,7 +178,7 @@ export function Header({
               <div className="p-2 border-t border-gray-200 dark:border-slate-700">
                 <button
                   onClick={handleLogout}
-                  className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/20 transition-colors"
+                  className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/20 transition-colors hover:cursor-pointer"
                 >
                   <Icons.LogOut className="w-4 h-4" />
                   Logout
