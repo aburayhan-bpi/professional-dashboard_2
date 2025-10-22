@@ -5,6 +5,7 @@ import type React from "react";
 import { Icons } from "@/src/components/icons";
 import { useAuth } from "@/src/hooks/use-auth";
 import { validateCredentials } from "@/src/lib/auth";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -107,6 +108,15 @@ export default function LoginPage() {
                   )}
                 </button>
               </div>
+            </div>
+
+            <div>
+              <Link
+                href="/forgot-password"
+                className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:cursor-pointer hover:underline"
+              >
+                Forgot password?
+              </Link>
             </div>
 
             <button

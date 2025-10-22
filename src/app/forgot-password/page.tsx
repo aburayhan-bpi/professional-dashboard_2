@@ -123,7 +123,7 @@ export default function ForgotPasswordPage() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium py-2 rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium py-2 rounded-lg transition-colors flex items-center justify-center gap-2 hover:cursor-pointer"
               >
                 {isLoading && <Icons.Loader className="w-4 h-4 animate-spin" />}
                 {isLoading ? "Sending..." : "Send OTP"}
@@ -155,7 +155,7 @@ export default function ForgotPasswordPage() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium py-2 rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium py-2 rounded-lg transition-colors flex items-center justify-center gap-2 hover:cursor-pointer"
               >
                 {isLoading && <Icons.Loader className="w-4 h-4 animate-spin" />}
                 {isLoading ? "Verifying..." : "Verify OTP"}
@@ -181,12 +181,12 @@ export default function ForgotPasswordPage() {
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:cursor-pointer"
                   >
                     {showPassword ? (
-                      <Icons.EyeOff className="w-4 h-4" />
-                    ) : (
                       <Icons.Eye className="w-4 h-4" />
+                    ) : (
+                      <Icons.EyeOff className="w-4 h-4" />
                     )}
                   </button>
                 </div>
@@ -209,7 +209,7 @@ export default function ForgotPasswordPage() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium py-2 rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium py-2 rounded-lg transition-colors flex items-center justify-center gap-2 hover:cursor-pointer"
               >
                 {isLoading && <Icons.Loader className="w-4 h-4 animate-spin" />}
                 {isLoading ? "Resetting..." : "Reset Password"}
@@ -219,8 +219,8 @@ export default function ForgotPasswordPage() {
 
           <div className="mt-6 text-center">
             <button
-              onClick={() => router.push("/login")}
-              className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+              onClick={() => router.replace("/login")}
+              className="text-sm text-blue-600 dark:text-blue-400 hover:underline hover:cursor-pointer"
             >
               Back to Login
             </button>
