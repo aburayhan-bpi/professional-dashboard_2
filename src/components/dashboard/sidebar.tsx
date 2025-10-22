@@ -38,7 +38,7 @@ export function Sidebar({ isOpen, isCollapsed, onClose }: SidebarProps) {
     <>
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm lg:hidden z-30"
+          className="fixed inset-0 bg-black/10 backdrop-blur-sm lg:hidden z-30"
           onClick={onClose}
           aria-hidden="true"
         />
@@ -91,9 +91,7 @@ export function Sidebar({ isOpen, isCollapsed, onClose }: SidebarProps) {
                 >
                   {getIcon(item.icon)}
                   {!isCollapsed && (
-                    <span className="lg:inline text-sm font-medium">
-                      {item.label}
-                    </span>
+                    <span className=" text-sm font-medium">{item.label}</span>
                   )}
                 </Link>
               );
@@ -101,13 +99,16 @@ export function Sidebar({ isOpen, isCollapsed, onClose }: SidebarProps) {
           </nav>
 
           <div className="p-4 border-t border-gray-200 dark:border-slate-800">
-            <div
-              className={`text-xs text-gray-500 dark:text-gray-400 ${
-                isCollapsed ? "lg:hidden" : ""
+            <Link
+              href={"https://github.com/aburayhan-bpi"}
+              target="_blank"
+              className={`flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400 ${
+                isCollapsed ? "" : ""
               }`}
             >
-              v1.0.0
-            </div>
+              <Icons.FaGithub />
+              {isCollapsed ? "" : "aburayhan-bpi"}
+            </Link>
           </div>
         </div>
       </aside>

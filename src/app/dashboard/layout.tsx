@@ -50,12 +50,13 @@ export default function DashboardLayout({
       <div className="flex-1 flex flex-col overflow-hidden">
         <Header
           onMenuClick={() => setSidebarOpen(!sidebarOpen)}
+          sidebarOpen={sidebarOpen}
           isCollapsed={sidebarCollapsed}
           onCollapseToggle={() => setSidebarCollapsed(!sidebarCollapsed)}
         />
 
         <main className="flex-1 overflow-y-auto">
-          <div className="p-4 lg:p-8 max-w-7xl mx-auto">{children}</div>
+          <div className="p-4 lg:p-8 mx-auto">{children}</div>
         </main>
       </div>
     </div>
