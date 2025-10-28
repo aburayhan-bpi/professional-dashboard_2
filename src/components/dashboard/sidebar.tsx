@@ -2,6 +2,7 @@
 
 import type React from "react";
 
+import { ModeToggle } from "@/src/hooks/themeToggler";
 import { useAuth } from "@/src/hooks/use-auth";
 import { SIDEBAR_ITEMS } from "@/src/lib/constants";
 import Link from "next/link";
@@ -97,6 +98,11 @@ export function Sidebar({ isOpen, isCollapsed, onClose }: SidebarProps) {
               );
             })}
           </nav>
+
+          <div>
+            {/* Theme Switcher */}
+            <ModeToggle className="inline-flex md:hidden w-full rounded-none items-center justify-center" />
+          </div>
 
           <div className="p-4 border-t border-gray-200 dark:border-slate-800">
             <Link

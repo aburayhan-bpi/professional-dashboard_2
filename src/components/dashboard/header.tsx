@@ -1,7 +1,8 @@
 "use client";
 
 import { useAuth } from "@/src/hooks/use-auth";
-import { useTheme } from "@/src/providers/theme-provider";
+
+import { ModeToggle } from "@/src/hooks/themeToggler";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -20,7 +21,7 @@ export function Header({
   onCollapseToggle,
 }: HeaderProps) {
   const router = useRouter();
-  const { theme, setTheme } = useTheme();
+
   const { user, logout } = useAuth();
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -75,46 +76,9 @@ export function Header({
         </button>
       </div>
 
-      {/* Theme Switcher */}
       <div className="flex items-center gap-4">
-        <div className="flex items-center gap-1 bg-gray-100 dark:bg-slate-800 rounded-lg p-1">
-          <button
-            onClick={() => setTheme("light")}
-            className={`p-2 rounded transition-colors hover:cursor-pointer ${
-              theme === "light"
-                ? "bg-white dark:bg-slate-700 text-gray-900 dark:text-white shadow-sm"
-                : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
-            }`}
-            title="Light mode"
-            aria-label="Light mode"
-          >
-            <Icons.Sun className="w-4 h-4" />
-          </button>
-          <button
-            onClick={() => setTheme("dark")}
-            className={`p-2 rounded transition-colors hover:cursor-pointer ${
-              theme === "dark"
-                ? "bg-white dark:bg-slate-700 text-gray-900 dark:text-white shadow-sm"
-                : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
-            }`}
-            title="Dark mode"
-            aria-label="Dark mode"
-          >
-            <Icons.Moon className="w-4 h-4" />
-          </button>
-          <button
-            onClick={() => setTheme("system")}
-            className={`p-2 rounded transition-colors hover:cursor-pointer ${
-              theme === "system"
-                ? "bg-white dark:bg-slate-700 text-gray-900 dark:text-white shadow-sm"
-                : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
-            }`}
-            title="System mode"
-            aria-label="System mode"
-          >
-            <Icons.Monitor className="w-4 h-4" />
-          </button>
-        </div>
+        {/* Theme Switcher */}
+        <ModeToggle className="hidden md:inline-flex" />
 
         <div className="relative" ref={dropdownRef}>
           <button

@@ -28,7 +28,14 @@ export default function RootLayout({
       >
         <ReduxProvider>
           <SpeedInsights />
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
         </ReduxProvider>
       </body>
     </html>

@@ -9,6 +9,8 @@
     "start": "next start --port 3088"
   },
   "dependencies": {
+    "@radix-ui/react-dropdown-menu": "^2.1.16",
+    "@radix-ui/react-slot": "^1.2.3",
     "@reduxjs/toolkit": "^2.9.2",
     "@vercel/speed-insights": "^1.2.0",
     "class-variance-authority": "^0.7.1",
