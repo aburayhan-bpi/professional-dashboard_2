@@ -1,23 +1,22 @@
-"use client"
+"use client";
 
-import { useEffect } from "react"
-import { useRouter } from "next/navigation"
-import { useAuth } from "../hooks/use-auth"
-
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { useAuth } from "../hooks/use-auth";
 
 export default function Home() {
-  const router = useRouter()
-  const { user, isLoading } = useAuth()
+  const router = useRouter();
+  const { user, isLoading } = useAuth();
 
   useEffect(() => {
     if (!isLoading) {
       if (user) {
-        router.push("/dashboard")
+        router.push("/dashboard");
       } else {
-        router.push("/login")
+        router.push("/login");
       }
     }
-  }, [user, isLoading, router])
+  }, [user, isLoading, router]);
 
   return (
     <div className="flex items-center justify-center min-h-screen">
@@ -26,5 +25,5 @@ export default function Home() {
         <p className="text-gray-600 dark:text-gray-400">Loading...</p>
       </div>
     </div>
-  )
+  );
 }

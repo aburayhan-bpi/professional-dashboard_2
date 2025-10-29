@@ -60,7 +60,9 @@ export function Header({
             <Icons.TbLayoutSidebarRightCollapseFilled />
           )}
         </button>
-
+        <span className="font-bold text-blue-900 dark:text-white lg:hidden">
+          Dashboard
+        </span>
         <button
           onClick={onCollapseToggle}
           className="hidden lg:flex -ml-7 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-500 p-2 rounded-r-lg transition-colors bg-gray-50 dark:bg-gray-800 hover:cursor-pointer"

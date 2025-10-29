@@ -5,9 +5,11 @@ import type React from "react";
 import { ModeToggle } from "@/src/hooks/themeToggler";
 import { useAuth } from "@/src/hooks/use-auth";
 import { SIDEBAR_ITEMS } from "@/src/lib/constants";
+import { logout } from "@/src/redux/features/user/authSlice";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Icons } from "../icons";
+import { LogoutButton } from "./LogoutButton";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -16,6 +18,7 @@ interface SidebarProps {
 }
 
 export function Sidebar({ isOpen, isCollapsed, onClose }: SidebarProps) {
+  const router = useRouter();
   const pathname = usePathname();
   const { user } = useAuth();
 
@@ -33,6 +36,11 @@ export function Sidebar({ isOpen, isCollapsed, onClose }: SidebarProps) {
       User: <Icons.User className="w-5 h-5" />,
     };
     return iconMap[iconName];
+  };
+
+  const handleLogout = () => {
+    logout();
+    router.push("/login");
   };
 
   return (
@@ -104,17 +112,11 @@ export function Sidebar({ isOpen, isCollapsed, onClose }: SidebarProps) {
             <ModeToggle className="inline-flex md:hidden w-full rounded-none items-center justify-center" />
           </div>
 
-          <div className="p-4 border-t border-gray-200 dark:border-slate-800">
-            <Link
-              href={"https://github.com/aburayhan-bpi"}
-              target="_blank"
-              className={`flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400 ${
-                isCollapsed ? "" : ""
-              }`}
-            >
-              <Icons.FaGithub />
-              {isCollapsed ? "" : "aburayhan-bpi"}
-            </Link>
+          <div
+            className="p-4 border-t border-gray-200 dark:border-slate-800"
+            onClick={handleLogout}
+          >
+            <LogoutButton isCollapsed={isCollapsed} />
           </div>
         </div>
       </aside>
